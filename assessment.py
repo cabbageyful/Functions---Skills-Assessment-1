@@ -97,9 +97,12 @@ def shipping_cost(fruit):
 my_hometown = 'tracy'
 
 def is_hometown(town):
-    """
+    """Checks if town is also Jennifer D's hometown.
 
-    """
+    Takes input string town and changes to all lowercase for easier
+    evaluation. If input is 'tracy' (for Tracy, CA), will return True.
+    Otherwise will return False."""
+    
 
     town = town.lower()
     if town == my_hometown:
