@@ -62,8 +62,9 @@ def is_berry(fruit):
     the fruit given is 'strawberry', 'cherry', or 'blackberry', will return
     True. Otherwise, will return False."""
 
-    fruit = fruit.lower()  # makes all lower case for ease in comparison
     
+    fruit = fruit.lower()  # makes all lower case for ease in comparison
+
     if fruit == 'strawberry' or fruit == 'cherry' or fruit == 'blackberry':
         return True
     else:
@@ -73,9 +74,12 @@ def is_berry(fruit):
 
 
 def shipping_cost(fruit):
-    """
+    """Returns shipping cost based on whether fruit is a berry or not.
 
-    """
+    Calls the is_berry function to evaluate if the input string in
+    shipping_cost is a berry. If is_berry returns True, shipping cost will be
+    zero. For all other inputs for fruit, shipping cost will be 5."""
+
 
     fruit_shipping = is_berry(fruit)
 
