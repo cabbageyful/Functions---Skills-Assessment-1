@@ -18,8 +18,17 @@ tax = .05   # default state tax amount
 
 
 def tax_calculator(tax, state, item_cost):
-    """
-    """
+    """Calculates total cost including tax.
+
+    Takes tax, mulitiplies times the item cost to find out the specific
+    tax amount for the item, then adds the tax amount to the item_cost to
+    evaluate the cost of the item with tax.
+
+    State input is primarily to check if state is California (CA). If so,
+    tax is .07 and will do same calculation with adjusted tax rate.
+
+    Changes case of state input to uppercase for simplified check if state is
+    CA or not."""
 
     state = state.upper()      # capitalize input, for ease w/ if conditional
 
@@ -47,11 +56,14 @@ def tax_calculator(tax, state, item_cost):
 #        == True``, and `5` if ``is_berry() == False``.
 
 def is_berry(fruit):
-    """
+    """Checks if input string is a berry fruit.
 
-    """
+    Sets case of input fruit to lower case for easier comparison. If
+    the fruit given is 'strawberry', 'cherry', or 'blackberry', will return
+    True. Otherwise, will return False."""
 
     fruit = fruit.lower()  # makes all lower case for ease in comparison
+    
     if fruit == 'strawberry' or fruit == 'cherry' or fruit == 'blackberry':
         return True
     else:
