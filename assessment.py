@@ -33,20 +33,28 @@ def tax_calculator(tax, state, item_cost):
     print total
     return total
 
-tax_calculator(tax, 'mi', 60)
-
 
 #####################################################################
 # PART TWO
 
 # 1. (a) Write a function, `is_berry()`, which takes a fruit name as a string
-#        and returns a boolean if the fruit is a "strawberry", "cherry", or 
+#        and returns a boolean if the fruit is a "strawberry", "cherry", or
 #        "blackberry".
 
 #    (b) Write another function, shipping_cost(), which calculates shipping cost
-#        by taking a fruit name as a string, calling the `is_berry()` function 
+#        by taking a fruit name as a string, calling the `is_berry()` function
 #        within the `shipping_cost()` function and returns `0` if ``is_berry()
 #        == True``, and `5` if ``is_berry() == False``.
+
+def is_berry(fruit):
+
+    fruit = fruit.lower()  # makes all lower case for ease in comparison
+    if fruit == 'strawberry' or 'cherry' or 'blackberry':
+        return True
+    else:
+        return False
+
+is_berry('CHERRY')
 
 # 2. (a) Write a function, `is_hometown()`, which takes a town name as a string
 #        and evaluates to `True` if it is your hometown, and `False` otherwise.
