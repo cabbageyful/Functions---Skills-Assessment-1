@@ -47,14 +47,34 @@ def tax_calculator(tax, state, item_cost):
 #        == True``, and `5` if ``is_berry() == False``.
 
 def is_berry(fruit):
+    """
+
+    """
 
     fruit = fruit.lower()  # makes all lower case for ease in comparison
-    if fruit == 'strawberry' or 'cherry' or 'blackberry':
+    if fruit == 'strawberry' or fruit == 'cherry' or fruit == 'blackberry':
         return True
     else:
         return False
 
-is_berry('CHERRY')
+# is_berry('CHERRY')
+
+
+def shipping_cost(fruit):
+    """
+
+    """
+
+    fruit_shipping = is_berry(fruit)
+
+    if fruit_shipping is True:
+        print 0
+        return 0
+    else:
+        print 5
+        return 5
+
+shipping_cost('BLACKBERRY')
 
 # 2. (a) Write a function, `is_hometown()`, which takes a town name as a string
 #        and evaluates to `True` if it is your hometown, and `False` otherwise.
