@@ -102,7 +102,7 @@ def is_hometown(town):
     Takes input string town and changes to all lowercase for easier
     evaluation. If input is 'tracy' (for Tracy, CA), will return True.
     Otherwise will return False."""
-    
+
 
     town = town.lower()
     if town == my_hometown:
@@ -155,6 +155,11 @@ def hometown_greeting(hometown, first, last):
 # 1. Write a function ``increment()`` with a nested inner function, ``add()`` 
 #    inside of it. The outer function should take ``x``, an integer which
 #    defaults to 1. The inner function should take ``y`` and add ``x`` and ``y`` together.
+
+def increment():
+
+    def add():
+        # not sure why we need to do it in this function - seems like it should be in the outer function
 
 # 2. Call the function ``increment()`` with x = 5. Assign what is returned to a variable name, addfive. Call 
 #    addfive with y = 5. Call again with y = 20.
